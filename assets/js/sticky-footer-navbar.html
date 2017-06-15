@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang='ja'>
+  <head>
+    <meta charset='utf-8'>
+    <title>bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css - Milkode</title>
+    <link href='/images/favicon.ico' rel='shortcut icon'>
+    <link href='/css/bootstrap.min.css' media='all' rel='stylesheet' type='text/css'>
+    <link href='/css/bootstrap-responsive.min.css' media='all' rel='stylesheet' type='text/css'>
+    <link href='/css/milkode.css' media='all' rel='stylesheet' type='text/css'>
+    <link href='/css/coderay.css' media='all' rel='stylesheet' type='text/css'>
+    <link href='/css/coderay-patch.css' media='all' rel='stylesheet' type='text/css'>
+    <link href='/css/smoothness/jquery-ui-1.8.22.custom.css' media='all' rel='stylesheet' type='text/css'>
+    <link href='/css/jquery.multiselect.css' media='all' rel='stylesheet' type='text/css'>
+    <link href='/css/jquery.multiselect.filter.css' media='all' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class='container-fluid' id='mainpage'>
+      <div class='header'>
+        <h1>
+          <a href="/"><img src=/images/MilkodeIcon135.png alt="milkode-icon-mini" border="0" height="75px"/></a>
+          Milkode &nbsp;
+              <img alt='' style='vertical-align:center; border: 0px; margin: 0px;' src='/images/go-home-5.png'><a href="/home" class="headmenu">Home</a>&nbsp;
+              <img alt='' style='vertical-align:center; border: 0px; margin: 0px;' src='/images/directory.png'><a href="/home/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css/.." class="headmenu">Directory</a>
+              <img alt='' style='vertical-align:center; border: 0px; margin: 0px;' src='/images/view-refresh-4.png'><a href="#updateModal" class="headmenu" data-toggle="modal">Update Packages</a>&nbsp;
+              <img alt='' style='vertical-align:center; border: 0px; margin: 0px;' src='/images/info.png'><a href="/info/bootstrap" class="headmenu">Stats</a>&nbsp;
+              <img alt='' style='vertical-align:center; border: 0px; margin: 0px;' src='/images/help.png'><a href="/help" class="headmenu">Help</a>
+          
+              <div id="updateModal" class="modal hide fade">
+                <div class="modal-header">
+                  <a href="#" class="close" data-dismiss="modal">&times;</a>
+                  <h3>Update Packages</h3>
+                </div>
+                <div class="modal-body">
+                  <h4>Update bootstrap?</h4>
+                </div>
+                <div class="modal-footer">
+                  <a href="#" id="updateCancel" class="btn" data-dismiss="modal">Cancel</a>
+                  <a href="#" id="updateOk" class="btn btn-primary" data-loading-text="Updating..." milkode-package-name="bootstrap">OK</a>
+                </div>
+              </div>
+          
+              <div id="lineno-modal" class="modal hide">
+                <div class="modal-header">
+                  <a href="#" class="close" data-dismiss="modal">&times;</a>
+                  <h3 id="lineno-path"></h3>
+                </div>
+                <div class="modal-body">
+                  <table class="CodeRay"><tr>
+                    <td class="code"><pre id="lineno-body">
+                    </pre></td>
+                  </tr></table>
+              </div>
+                <div class="modal-footer">
+                  <span id="lineno-copyall"></span>
+                  <a href="#" id="lineno-ok" class="btn" data-dismiss="modal">OK</a>
+                </div>
+              </div>
+        </h1>
+      </div>
+      <div class='content'>
+        <div class='search_form'>
+          <script>
+            function set_pathname() {
+              document.searchform.pathname.value = location.pathname;
+            }
+          </script>
+          <form action='/search' method='post' name='searchform'>
+            <p>
+              <input id='query' name='query' size='70' style='width: 419px;' type='text' value='f:*'>
+              <input id='search' name='search' onclick='set_pathname()' type='submit' value='Search'>
+              <input id='newtab' name='newtab' onclick='open_newtab(); return false;' type='submit' value='New Tab'>
+              <input id='clear' name='clear' onclick='set_pathname()' type='submit' value='Clear'>
+              <br>
+              Target:
+              <select name="shead" id="shead">
+              <option value='all' >all</option><option value='package' selected>Package</option><option value='directory' >Directory</option>
+              </select>
+              Package:
+              <select name="package" id="package" onchange="select_package()">
+              <option value='---' >---</option><option value='bootstrap' selected>bootstrap</option><option value='typeahead.js' >typeahead.js</option>
+              </select>
+              <label class='checkbox inline'><input type='checkbox' name='onematch' value='on' />one file one match</label>
+              <label class='checkbox inline'><input type='checkbox' name='sensitive' value='on' />case sensitive</label>
+                    <div class="favorite_list">
+                      Favorites:
+                      <strong><a id='favorite_list_0' href='/home/bootstrap?query=f%3A*' onclick='topic_path("favorite_list_0");'>bootstrap</a></strong>&nbsp;&nbsp;
+              <a href="/home?sort=favtime">...</a>
+              
+                    </div>
+                  </div>
+              <input name='pathname' type='hidden' value=''>
+            </p>
+          </form>
+        </div>
+        <div class='search-summary'>
+          <div class='favstar ss-box'>
+            <a href="javascript:" class="star favorited" milkode-package-name="bootstrap">Favorite Me</a>
+          </div>
+          <div class='keyword ss-box'>
+            <a id='topic_0' href='/home?query=f%3A*' onclick='topic_path("topic_0");'>home</a>/<a id='topic_1' href='/home/bootstrap?query=f%3A*' onclick='topic_path("topic_1");'>bootstrap</a>/<a id='topic_2' href='/home/bootstrap/docs?query=f%3A*' onclick='topic_path("topic_2");'>docs</a>/<a id='topic_3' href='/home/bootstrap/docs/examples?query=f%3A*' onclick='topic_path("topic_3");'>examples</a>/<a id='topic_4' href='/home/bootstrap/docs/examples/sticky-footer-navbar?query=f%3A*' onclick='topic_path("topic_4");'>sticky-footer-navbar</a>/<a id='topic_5' href='/home/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css?query=f%3A*' onclick='topic_path("topic_5");'>sticky-footer-navbar.css</a>
+          </div>
+          <div class='additional-info ss-box'>
+            （0.033256259秒）
+          </div>
+          <div class='search-summary-hook ss-box'>
+            
+          </div>
+          <div class='ss-end'></div>
+        </div>
+        <table class="CodeRay"><tr>
+          <td class="line-numbers"><pre><a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '1');" title="Display line number">1</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '2');" title="Display line number">2</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '3');" title="Display line number">3</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '4');" title="Display line number">4</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '5');" title="Display line number">5</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '6');" title="Display line number">6</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '7');" title="Display line number">7</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '8');" title="Display line number">8</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '9');" title="Display line number">9</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '10');" title="Display line number">10</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '11');" title="Display line number">11</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '12');" title="Display line number">12</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '13');" title="Display line number">13</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '14');" title="Display line number">14</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '15');" title="Display line number">15</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '16');" title="Display line number">16</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '17');" title="Display line number">17</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '18');" title="Display line number">18</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '19');" title="Display line number">19</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '20');" title="Display line number">20</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '21');" title="Display line number">21</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '22');" title="Display line number">22</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '23');" title="Display line number">23</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '24');" title="Display line number">24</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '25');" title="Display line number">25</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '26');" title="Display line number">26</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '27');" title="Display line number">27</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '28');" title="Display line number">28</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '29');" title="Display line number">29</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '30');" title="Display line number">30</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '31');" title="Display line number">31</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '32');" title="Display line number">32</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '33');" title="Display line number">33</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '34');" title="Display line number">34</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '35');" title="Display line number">35</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '36');" title="Display line number">36</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '37');" title="Display line number">37</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '38');" title="Display line number">38</a>&#x000A;<a href="#lineno-modal" data-toggle="modal" onclick="lineno_setup('/bootstrap/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css:', '39');" title="Display line number">39</a></pre></td>
+          <td class="code"><pre><span id="n1"><span class="comment">/* Sticky footer styles</span>&#x000A;<span id="n2">-------------------------------------------------- */</span></span>&#x000A;<span id="n3"><span class="tag">html</span> {</span>&#x000A;<span id="n4">  <span class="key">position</span>: <span class="value">relative</span>;</span>&#x000A;<span id="n5">  <span class="key">min-height</span>: <span class="float">100%</span>;</span>&#x000A;<span id="n6">}</span>&#x000A;<span id="n7"><span class="tag">body</span> {</span>&#x000A;<span id="n8">  <span class="comment">/* Margin bottom by footer height */</span></span>&#x000A;<span id="n9">  <span class="key">margin-bottom</span>: <span class="float">60px</span>;</span>&#x000A;<span id="n10">}</span>&#x000A;<span id="n11"><span class="class">.footer</span> {</span>&#x000A;<span id="n12">  <span class="key">position</span>: <span class="value">absolute</span>;</span>&#x000A;<span id="n13">  <span class="key">bottom</span>: <span class="float">0</span>;</span>&#x000A;<span id="n14">  <span class="key">width</span>: <span class="float">100%</span>;</span>&#x000A;<span id="n15">  <span class="comment">/* Set the fixed height of the footer here */</span></span>&#x000A;<span id="n16">  <span class="key">height</span>: <span class="float">60px</span>;</span>&#x000A;<span id="n17">  <span class="key">background-color</span>: <span class="color">#f5f5f5</span>;</span>&#x000A;<span id="n18">}</span>&#x000A;<span id="n19"></span>&#x000A;<span id="n20"></span>&#x000A;<span id="n21"><span class="comment">/* Custom page CSS</span>&#x000A;<span id="n22">-------------------------------------------------- */</span></span>&#x000A;<span id="n23"><span class="comment">/* Not required for template or sticky footer method. */</span></span>&#x000A;<span id="n24"></span>&#x000A;<span id="n25"><span class="tag">body</span> &gt; <span class="class">.container</span> {</span>&#x000A;<span id="n26">  <span class="key">padding</span>: <span class="float">60px</span> <span class="float">15px</span> <span class="float">0</span>;</span>&#x000A;<span id="n27">}</span>&#x000A;<span id="n28"><span class="class">.container</span> <span class="class">.text-muted</span> {</span>&#x000A;<span id="n29">  <span class="key">margin</span>: <span class="float">20px</span> <span class="float">0</span>;</span>&#x000A;<span id="n30">}</span>&#x000A;<span id="n31"></span>&#x000A;<span id="n32"><span class="class">.footer</span> &gt; <span class="class">.container</span> {</span>&#x000A;<span id="n33">  <span class="key">padding-right</span>: <span class="float">15px</span>;</span>&#x000A;<span id="n34">  <span class="key">padding-left</span>: <span class="float">15px</span>;</span>&#x000A;<span id="n35">}</span>&#x000A;<span id="n36"></span>&#x000A;<span id="n37"><span class="tag">code</span> {</span>&#x000A;<span id="n38">  <span class="key">font-size</span>: <span class="float">80%</span>;</span>&#x000A;<span id="n39">}</span></pre></td>
+        </tr></table>
+      </div>
+    </div>
+    <script src='/js/jquery-1.7.2.min.js' type='text/javascript'></script>
+    <script src='/js/jquery-ui-1.8.22.custom.min.js' type='text/javascript'></script>
+    <script src='/js/jquery.multiselect.min.js' type='text/javascript'></script>
+    <script src='/js/jquery.multiselect.filter.min.js' type='text/javascript'></script>
+    <script src='/js/bootstrap.min.js' type='text/javascript'></script>
+    <script src='/js/milkode.js' type='text/javascript'></script>
+  </body>
+</html>
